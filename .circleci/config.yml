@@ -15,7 +15,7 @@ jobs:
       - run: npm ci
       - run:
           name: Run tests
-          command:  npx playwright test --grep=@smoke > test-results.txt
+          command:  npx playwright test --grep=@smoke --reporter=list> test-results.txt
           no_output_timeout: 10m
           environment:
             NO_COLOR: "1"
